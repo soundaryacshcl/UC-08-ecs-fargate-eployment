@@ -1,3 +1,41 @@
+# DevOps Challenge: Healthcare Microservices Deployment on AWS Fargate
+
+## Table of Contents
+
+1.  [Overview](#1-overview)
+2.  [Architecture](#2-architecture)
+3.  [Services](#3-services)
+4.  [Technology Stack](#4-technology-stack)
+5.  [Project Structure](#5-project-structure)
+6.  [Setup and Prerequisites](#6-setup-and-prerequisites)
+    * [AWS Configuration](#aws-configuration)
+    * [Local Machine Setup](#local-machine-setup)
+    * [GitHub Repository Setup](#github-repository-setup)
+7.  [Deployment Workflows (GitHub Actions)](#7-deployment-workflows-github-actions)
+    * [Infrastructure as Code (Terraform) Workflow](#infrastructure-as-code-terraform-workflow)
+    * [Application CI/CD Workflow](#application-cicd-workflow)
+8.  [Monitoring and Logging](#8-monitoring-and-logging)
+9.  [Cleanup](#9-cleanup)
+10. [Evaluation Criteria](#10-evaluation-criteria)
+11. [Contact](#11-contact)
+
+## 1. Overview
+
+This project demonstrates a comprehensive DevOps pipeline for deploying a simple healthcare application consisting of two Node.js microservices (Patient Service and Appointment Service) on AWS Fargate. The solution leverages Infrastructure as Code (IaC) with Terraform, containerization with Docker, and automated CI/CD pipelines using GitHub Actions.
+
+**Key Objectives:**
+
+* Containerize Node.js microservices.
+* Provision AWS infrastructure using Terraform with remote state management.
+* Implement robust CI/CD pipelines for both infrastructure and application code.
+* Deploy microservices to AWS Fargate, a serverless container orchestration service.
+* Configure basic monitoring and logging using AWS CloudWatch.
+
+## 2. Architecture
+
+The architecture is designed for high availability, scalability, and automation.
+
+```mermaid
 graph TD
     subgraph GitHub
         GH_REPO[GitHub Repository] --> |Push Code| GHA_CI[GitHub Actions CI Workflow]
