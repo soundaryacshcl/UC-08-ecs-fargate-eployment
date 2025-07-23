@@ -105,7 +105,7 @@ jobs:
       - name: Generate Terraform Docs and Commit
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
-          git config --local user.email "soundaryacs92@gmail.com"
+          git config --local user.email "soundaryacshcl@gmail.com"
           git config --local user.name "soundaryacshcl"
 
           terraform-docs markdown . > README.md.new
